@@ -12,7 +12,7 @@ This project provides steps for benchmarking on the following models on Jetson d
 ### Install Requirements
 ```
 git clone https://github.com/NVIDIA-AI-IOT/TAO-PTM-Jetson-Benchmarks.git
-cd ptm_benchmarks 
+cd TAO-PTM-Jetson-Benchmarks 
 sudo sh install_requirements.sh
 ```
 Note: All libraries will be installed for ```python3```
