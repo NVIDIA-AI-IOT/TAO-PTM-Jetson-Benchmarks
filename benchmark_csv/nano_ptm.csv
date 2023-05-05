@@ -1,0 +1,7 @@
+ModelName,Devices,Precision,BatchSizeGPU,BatchSizeDLA,input
+peoplenet,1,best,1,0,None
+action_recog_2d,1,fp16,1,0,input_rgb:1x96x224x224
+action_recog_3d,1,fp16,1,0,input_rgb:3x1x224x224
+dashcamnet,1,best,1,0,None
+bodyposenet,1,best,1,0,input_1:0:1x288x384x3
+lpr_us,1,fp16,16,0,image_input:16x3x48x96
