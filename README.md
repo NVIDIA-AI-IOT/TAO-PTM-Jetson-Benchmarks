@@ -42,7 +42,7 @@ For example, for running only PeopleNet on Jetson Orin:
 
 ## Running Benchmarks for Jetson AGX Xavier
 
-``` sudo python3 benchmark.py --all --csv_file_path <path-to>/benchmark_csv/agx_xavier_ptm.csv --model_dir <absolute-path-to-engine-files>```
+``` sudo python3 benchmark.py --all --csv_file_path <path-to>/benchmark_csv/agx_xavier_ptm.csv --model_dir <absolute-path-to-engine-files> --jetson_devkit xavier```
 
 Follow [Running Individual Benchmark Models](https://github.com/NVIDIA-AI-IOT/TAO-PTM-Jetson-Benchmarks#running-individual-benchmark-models) to specify a single model for benchmarking.
 
@@ -54,7 +54,7 @@ Follow [Running Individual Benchmark Models](https://github.com/NVIDIA-AI-IOT/TA
 
 ## Running Benchmarks for Jetson Nano
 
-``` sudo python3 benchmark.py --all --csv_file_path <path-to>/benchmark_csv/nano_ptm.csv --model_dir <absolute-path-to-engine-files>```
+``` sudo python3 benchmark.py --all --csv_file_path <path-to>/benchmark_csv/nano_ptm.csv --model_dir <absolute-path-to-engine-files> --jetson_devkit nano```
 
 Follow [Running Individual Benchmark Models](https://github.com/NVIDIA-AI-IOT/TAO-PTM-Jetson-Benchmarks#running-individual-benchmark-models) to specify a single model for benchmarking.
 
