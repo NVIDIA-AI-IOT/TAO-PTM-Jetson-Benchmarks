@@ -23,7 +23,7 @@ tao-converter -k tlt_encode \
                    -d 3,960,544 \
                    -o output_cov/Sigmoid,output_bbox/BiasAdd \
                    -c <path-to>/resnet34_peoplenet_int8.txt \
-                   -e <path-to>/ptm_benchmarks/models_dir/peoplenet_gpu.engine \
+                   -e <path-to-store-generated-engine>/peoplenet_gpu.engine \
                    -b 32 \
                    -m 32 \
                    -t int8 <path-to>/resnet34_peoplenet_int8.etlt
@@ -36,7 +36,7 @@ tao-converter -k tlt_encode \
                    -d 3,960,544 \
                    -o output_cov/Sigmoid,output_bbox/BiasAdd \
                    -c <path-to>/resnet34_peoplenet_int8.txt \
-                   -e <path-to>/ptm_benchmarks/models_dir/peoplenet_dla_0.engine \
+                   -e <path-to-store-generated-engine>/peoplenet_dla_0.engine \
                    -b 4 \
                    -m 4 \
                    -u 0 \
@@ -52,7 +52,7 @@ wget 'https://api.ngc.nvidia.com/v2/models/nvidia/tao/actionrecognitionnet/versi
 
 2. Generate the GPU engine file:
 ```
-tao-converter <path-to>/resnet18_2d_rgb_hmdb5_32.etlt -d 96x224x224 -k nvidia_tao -p input_rgb,64x96x224x224,64x96x224x224,64x96x224x224 -t fp16  -e <path-to>/ptm_benchmarks/models_dir/action_recog_2d_gpu.engine
+tao-converter <path-to>/resnet18_2d_rgb_hmdb5_32.etlt -d 96x224x224 -k nvidia_tao -p input_rgb,64x96x224x224,64x96x224x224,64x96x224x224 -t fp16  -e <path-to-store-generated-engine>/action_recog_2d_gpu.engine
 ```
 
 ## [ActionRecognitionNet 3D](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/models/actionrecognitionnet)
@@ -63,7 +63,7 @@ wget 'https://api.ngc.nvidia.com/v2/models/nvidia/tao/actionrecognitionnet/versi
 
 2. Generate the GPU engine file:
 ```
-tao-converter -e <path-to>/ptm_benchmarks/models_dir/action_recog_3d_gpu.engine -k nvidia_tao -p input_rgb,32x3x32x224x224,32x3x32x224x224,32x3x32x224x224 -t fp16 <path-to>/resnet18_3d_rgb_hmdb5_32.etlt
+tao-converter -e <path-to-store-generated-engine>/action_recog_3d_gpu.engine -k nvidia_tao -p input_rgb,32x3x32x224x224,32x3x32x224x224,32x3x32x224x224 -t fp16 <path-to>/resnet18_3d_rgb_hmdb5_32.etlt
 ```
 
 ## [DashCamNet](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/models/dashcamnet)
@@ -83,7 +83,7 @@ tao-converter -k tlt_encode \
                    -d 3,960,544 \
                    -o output_cov/Sigmoid,output_bbox/BiasAdd \
                    -c <path-to>/dashcamnet_int8.txt \
-                   -e <path-to>/ptm_benchmarks/models_dir/dashcamnet_gpu.engine \
+                   -e <path-to-store-generated-engine>/dashcamnet_gpu.engine \
                    -b 32 \
                    -m 32 \
                    -t int8  \  
@@ -96,7 +96,7 @@ tao-converter -k tlt_encode \
                    -d 3,960,544 \
                    -o output_cov/Sigmoid,output_bbox/BiasAdd \
                    -c <path-to>/dashcamnet_int8.txt \
-                   -e <path-to>/ptm_benchmarks/models_dir/dashcamnet_dla_0.engine \
+                   -e <path-to-store-generated-engine>/dashcamnet_dla_0.engine \
                    -b 8 \
                    -m 8 \
                    -u 0 \
@@ -122,7 +122,7 @@ tao-converter -k nvidia_tlt \
                     -c <path-to>/int8_calibration_288_384.txt \
                     <path-to>/model.etlt \
                     -t int8 \
-                    -e <path-to>/ptm_benchmarks/models_dir/bodyposenet_gpu.engine
+                    -e <path-to-store-generated-engine>/bodyposenet_gpu.engine
 ```
 
 ## [LPRNet](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/models/lprnet)
@@ -133,5 +133,5 @@ wget 'https://api.ngc.nvidia.com/v2/models/nvidia/tao/lprnet/versions/deployable
 
 2. Generate the GPU engine file:
 ```
-tao-converter -k nvidia_tlt -p image_input,128x3x48x96,128x3x48x96,128x3x48x96 <path-to>/us_lprnet_baseline18_deployable.etlt -t fp16 -e <path-to>/ptm_benchmarks/models_dir/lpr_us_gpu.engine
+tao-converter -k nvidia_tlt -p image_input,128x3x48x96,128x3x48x96,128x3x48x96 <path-to>/us_lprnet_baseline18_deployable.etlt -t fp16 -e <path-to-store-generated-engine>/lpr_us_gpu.engine
 ```
