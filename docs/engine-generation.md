@@ -63,7 +63,7 @@ wget 'https://api.ngc.nvidia.com/v2/models/nvidia/tao/actionrecognitionnet/versi
 
 2. Generate the GPU engine file:
 ```
-tao-converter -e <path-to-store-generated-engine>/action_recog_3d_gpu.engine -k nvidia_tao -p input_rgb,32x3x32x224x224,32x3x32x224x224,32x3x32x224x224 -t fp16 <path-to>/resnet18_3d_rgb_hmdb5_32.etlt
+tao-converter <path-to>/resnet18_3d_rgb_hmdb5_32.etlt -k nvidia_tao -p input_rgb,32x3x32x224x224,32x3x32x224x224,32x3x32x224x224 -t fp16  -e <path-to-store-generated-engine>/action_recog_3d_gpu.engine
 ```
 
 ## [DashCamNet](https://catalog.ngc.nvidia.com/orgs/nvidia/teams/tao/models/dashcamnet)
